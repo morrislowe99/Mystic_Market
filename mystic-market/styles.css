@@ -1,0 +1,669 @@
+/* Body (all html's) */
+
+body {
+    font-family: 'Palatino', 'Palatino Linotype', 'Book Antiqua', 'URW Palladio L', serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Header (all html"s) */
+
+header {
+    background: #000000;
+    width: 100%;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    margin-right: 50px;
+}
+
+.nav-list li:last-child {
+    margin-right: 0;
+}
+
+nav a {
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#shopping-bag-icon {
+    position: relative;
+}
+
+#bag-display {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    background-color: #A45EE5;
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffffff;
+    font-family: 'Palatino', 'Palatino Linotype', 'Book Antiqua', 'URW Palladio L', serif;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+
+
+/* Shopping-bag (all html"s) */
+
+#modal .modal-content .empty-message {
+    text-align: center;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    margin: 0;
+    border: 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-wrapper {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% / 3);
+    padding-top: 88px;
+    padding-bottom: 44px;
+}
+
+.modal-content {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    padding-left: 44px;
+    padding-right: 44px;
+    border: 2px solid white;
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffffff;
+    flex-direction: column;
+}
+
+.modal-footer {
+    padding-top: 44px;
+    padding-bottom: 44px;
+    padding-left: 44px;
+    padding-right: 44px;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffffff;
+    align-items: center;
+}
+
+.bag-item {
+    padding-top: 44px;
+    padding-bottom: 44px;
+    border-bottom: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.bag-item > div, .bag-item > img {
+    flex: 1 1 auto; 
+    text-align: center;
+    max-width: calc(100% / 5);
+    overflow: auto;
+    object-fit: contain;
+}
+
+.bag-item:only-child {
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+
+.bag-item:first-child {
+    padding-top: 22px;
+}
+
+.bag-item:last-child {
+    padding-bottom: 22px;
+    border-bottom: none;
+}
+
+.quantity-button {
+    width: 44px;
+    height: 44px;
+    border: 2px solid white;
+    background: transparent;
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #000000;
+}
+
+.quantity-button:active {
+    opacity: 0.5;
+}
+
+.checkout-button {
+    height: 44px;
+    width: 186px;
+    border: 2px solid white;
+    background: transparent;
+    font-family: 'Palatino', 'Palatino Linotype', 'Book Antiqua', 'URW Palladio L', serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #000000;
+}
+
+.checkout-button:active {
+    opacity: 0.5;
+}
+
+
+
+/* Loupe (all html"s) */
+
+.modal-wrapper-loupe {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% / 3);
+    padding-top: 88px;
+    padding-bottom: 44px;
+}
+
+#search-input {
+  font-family: 'Palatino', 'Palatino Linotype', 'Book Antiqua', 'URW Palladio L', serif;
+  font-size: 12px;
+  font-weight: 400;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid white;
+}
+
+.modal-search-bar {
+    padding: 44px;
+    border: 2px solid white;
+}
+
+.modal-search-result {
+    padding-left: 44px;
+    padding-right: 44px;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.search-item {
+    border-bottom: 2px solid white;
+}
+
+.search-item:last-child {
+    border-bottom: none;
+}
+
+.search-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.search-item a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    padding-top: 44px;
+    padding-bottom: 44px;
+}
+
+.search-item-text {
+    text-align: center;
+}
+
+.search-item-image, .search-item-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+
+
+/* Intro (index.html) */
+
+.intro {
+    width: 100%;
+    height: 580px;
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+    align-items: center;
+    padding-top: 44px;
+}
+
+.intro h1 {
+    font-size: 56px;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    grid-row: 1;
+    margin: 0;
+    margin-top: 3mm;
+}
+
+.intro p {
+    font-size: 28px;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+    grid-row: 2;
+    margin: 0;
+}
+
+.intro p span {
+    display: block;
+}
+
+.intro a {
+    font-size: 21px;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+.intro a span {
+    display: inline;
+}
+
+.intro a:hover span {
+    text-decoration: underline;
+}
+
+.intro-links {
+    display: flex;
+    justify-content: center;
+    grid-row: 3;
+    margin: 0;
+    margin-bottom: 6mm;
+}
+
+
+
+/* Crystals (index.html) */
+
+.crystals {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 44px;
+    padding: 44px 44px 0 44px;
+    background-color: #000000;
+}
+
+.crystal-box {
+    padding: 44px 44px 0 44px;
+    cursor: pointer;
+    height: 624px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.black-box {
+    width: 100%;
+    height: 50%;
+    background-color: black;
+    margin-bottom: 44px;
+}
+
+.crystal-box h2, .crystal-box p {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.crystal-box h2 {
+    font-size: 56px;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+}
+
+.crystal-box p {
+    font-size: 28px;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+}
+
+.black-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel__item {
+    width: 40%;
+    height: 40%;
+    object-fit: contain;
+    opacity: 0.5;
+    transition: all 0.5s;
+    transform: translateY(60%)
+}
+
+.carousel__item:nth-child(2) {
+    opacity: 1;
+    transform: scale(2) translateY(40%);
+}
+
+.btn {
+    transform: translateY(-25%);
+    width: 56px;
+    height: 56px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 56px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+
+
+/* Crystals-2 (all html's) */
+
+.crystals-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 44px;
+    padding: 44px 44px 0 44px;
+    position: relative;
+    background-color: #000000;
+}
+
+.crystal-box-2 {
+    height: 624px;
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+}
+
+.crystal-box-2 .black-box-2 {
+    width: calc(50% - 22px);
+    height: calc(100% - 88px);
+    margin: 44px 22px 44px 44px;
+    background-color: #000000;
+}
+
+.product-container-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-image-2 {
+  width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+}
+
+.text-box {
+    position: relative;
+}
+
+.crystal-box-2 .text-box {
+    width: calc(50% - 22px);
+    height: calc(100% - 88px);
+    margin: 44px 44px 44px 22px;
+}
+
+.crystal-box-2 h1 {
+    font-size: 28px;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+}
+
+.crystal-box-2 p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0;
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+.crystal-box-2 .text-box p:first-of-type {
+    padding-top: 56px;
+    padding-bottom: 28px;
+}
+
+.crystal-box-2 .text-box p:last-of-type {
+    padding-top: 28px;
+    padding-bottom: 56px;
+}
+
+.info-bar {
+    display: flex;
+    position: absolute;
+    height: 44px;
+    background-color: #000000;
+    left: 0;
+    bottom: 0;
+    width: calc((100% - 44px) / (4 / 3))
+}
+
+.buy-bar {
+    display: flex;
+    position: absolute;
+    height: 44px;
+    background-color: #000000;
+    right: 0;
+    bottom: 0;
+    width: calc((100% - 44px) / (4 / 1))
+}
+
+.bar-part {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    font-family: 'Palatino', 'Palatino Linotype', 'Book Antiqua', 'URW Palladio L', serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.bar-part.price {
+    border-bottom: 2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+}
+
+.bar-part.unit {
+    border-bottom: 2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+}
+
+.bar-part.status {
+    border-bottom: 2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+}
+
+.bar-part.buy-button {
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    background-color: #000000;
+}
+
+.buy-button:active {
+    opacity: 0.5;
+}
+
+
+
+/* Footer (all html's) */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #000000;
+    padding: 22px;
+}
+
+.footer-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer p {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.email-link {
+    color: #A45EE5;
+    text-decoration: none;
+}
+
+.marktplaats-link {
+    color: #A45EE5;
+    text-decoration: none;
+}
+
+.etsy-link {
+    color: #A45EE5;
+    text-decoration: none;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+
+/* Other and Other-2 */
+
+.other-heading {
+    font-size: 56px;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+.other-heading-2 {
+    font-size: 28px;
+    font-weight: 400;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+.other-text {
+    font-size: 28px;
+    font-weight: 400;
+    color: white;
+    margin: 0;
+}
+
+.other {
+    padding: 88px 44px 44px 44px;
+}
+
+.other p {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.other p:first-of-type {
+    padding-top: 0;
+    padding-bottom: 14px;
+}
+
+.other p:last-of-type {
+    padding-top: 14px;
+    padding-bottom: 0;
+}
+
+.other-2 {
+    padding: 88px 44px 44px 44px;
+}
+
+.other-2 p {
+    padding-top: 0;
+    padding-bottom: 28px;
+}
+
+.other-2 p:last-of-type {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+
+/* Background (all html's) */
+
+.color-transition {
+  transition: background-color 1.5s;
+}
